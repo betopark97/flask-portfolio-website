@@ -6,9 +6,21 @@ app = Flask(__name__)
 def hello_world():
     return render_template('home.html')
 
-@app.route('/places')
-def hello_places():
-    return "hello places"
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')
+
+@app.route('/resume')
+def resume():
+    return render_template('resume.html')
+
+@app.route('/projects')
+def projects():
+    return render_template('projects.html')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True)
